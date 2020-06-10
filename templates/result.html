@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	{{ df.to_html(render_links=True, index=False, classes=["text-center", "table", "table-bordered", "table-striped", "table-hover"]).replace('<th>','<th style = "text-align: center">')|safe }}
+
+	<div class="col-md-4 col-lg-offset-2">
+		<h2>Is Converted?</h2>
+		<h1 style="color:green;">{{ result }}</h1>
+	</div>
+
+{% endblock %}
